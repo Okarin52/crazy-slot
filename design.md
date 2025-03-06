@@ -27,7 +27,7 @@ crazy-slot
 ### 2.2 システムアーキテクチャ
 ```mermaid
 graph TD
-    A[AWS EventBridge] -->|定期実行 or イベント発生| B[AWS Lambda (Node.js)]
+    A[AWS EventBridge] -->|cron 6時| B[AWS Lambda Node.js]
     B -->|HTTPリクエスト| C[Discord Webhook]
     
     subgraph AWS
